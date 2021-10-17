@@ -3,7 +3,7 @@
 public static class ModuleExtensions
 {
     // this could also be added into the DI container
-    static readonly List<IModule> registeredModules = new();
+    private static readonly List<IModule> RegisteredModules = new();
 
     public static WebApplicationBuilder RegisterModules(this WebApplicationBuilder builder)
     {
@@ -11,7 +11,7 @@ public static class ModuleExtensions
         foreach (var module in modules)
         {
             module.RegisterModule(builder.Services);
-            registeredModules.Add(module);
+            RegisteredModules.Add(module);
         }
 
         return builder;
@@ -19,10 +19,11 @@ public static class ModuleExtensions
 
     public static WebApplication MapEndpoints(this WebApplication app)
     {
-        foreach (var module in registeredModules)
+        foreach (var module in RegisteredModules)
         {
             module.MapEndpoints(app);
         }
+
         return app;
     }
 

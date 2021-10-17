@@ -4,22 +4,22 @@ namespace MinimalApiPlayground.Modules.Weather
 {
     public class WeatherForecastService : IWeatherForecastService
     {
-    //    private readonly IWeatherForecastDataContainerRepository weatherForecastDataContainerRepository;
+    // private readonly IWeatherForecastDataContainerRepository weatherForecastDataContainerRepository;
     //    private readonly ILogger<WeatherForecastService> logger;
 
-    //    public WeatherForecastService(IWeatherForecastDataContainerRepository weatherForecastDataContainerRepository, ILogger<WeatherForecastService> logger)
+    // public WeatherForecastService(IWeatherForecastDataContainerRepository weatherForecastDataContainerRepository, ILogger<WeatherForecastService> logger)
     //    {
     //        this.weatherForecastDataContainerRepository = weatherForecastDataContainerRepository ?? throw new ArgumentNullException(nameof(weatherForecastDataContainerRepository));
     //        this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
     //    }
 
-    //    public async Task<IEnumerable<WeatherForecast>> GetWeatherForecastsAsync()
+    // public async Task<IEnumerable<WeatherForecast>> GetWeatherForecastsAsync()
     //    {
     //        logger.LogInformation("Getting forecasts from database.");
     //        return await weatherForecastDataContainerRepository.GetWeatherForecastsAsync();
     //    }
 
-    //    public async Task<WeatherForecast?> GetWeatherForecastAsync(int id)
+    // public async Task<WeatherForecast?> GetWeatherForecastAsync(int id)
     //    {
     //        var result = await weatherForecastDataContainerRepository.GetWeatherForecastsAsync(id);
     //        return result.SingleOrDefault();
@@ -27,8 +27,8 @@ namespace MinimalApiPlayground.Modules.Weather
 
         private static readonly string[] Summaries = new[]
                 {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+                    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+                };
 
         private readonly ILogger<WeatherForecastService> logger;
 
@@ -46,6 +46,7 @@ namespace MinimalApiPlayground.Modules.Weather
             {
                 return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                 {
+                    Id = Guid.NewGuid().ToString(),
                     Date = DateTime.Now.AddDays(index),
                     TemperatureC = rng.Next(-20, 55),
                     Summary = Summaries[rng.Next(Summaries.Length)]
