@@ -1,0 +1,37 @@
+<Project>
+
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <RuntimeIdentifiers>win-x64;linux-x64;</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RepoRoot>$(SolutionDir)</RepoRoot>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <IsPackable>false</IsPackable>
+    <Authors>Peter Nylander</Authors>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>false</PublishRepositoryUrl>        
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>CODE_ANALYSIS</DefineConstants>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="!$(MSBuildProjectName.Contains('.Deployment'))">
+      <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.354" PrivateAssets="all" />
+      <AdditionalFiles Include="$(SolutionDir)stylecop.json">
+        <Link>Properties\stylecop.json</Link>
+    </AdditionalFiles>
+  </ItemGroup>
+</Project>
