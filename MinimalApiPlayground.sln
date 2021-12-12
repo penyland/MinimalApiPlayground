@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolkit.FeatureModules", "src\Toolkit.FeatureModules\Toolkit.FeatureModules.csproj", "{B6FCA8AD-E4F8-401C-A460-E375E7ACC2F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit.FeatureModules.SourceGenerator", "Toolkit.FeatureModules.SourceGenerator\Toolkit.FeatureModules.SourceGenerator.csproj", "{BD2027F2-C545-4DC7-A9CA-CCA7DE8CD202}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{660A11D1-EB59-4095-AF92-21AEEEC1BD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660A11D1-EB59-4095-AF92-21AEEEC1BD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660A11D1-EB59-4095-AF92-21AEEEC1BD32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FCA8AD-E4F8-401C-A460-E375E7ACC2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FCA8AD-E4F8-401C-A460-E375E7ACC2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FCA8AD-E4F8-401C-A460-E375E7ACC2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FCA8AD-E4F8-401C-A460-E375E7ACC2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2027F2-C545-4DC7-A9CA-CCA7DE8CD202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2027F2-C545-4DC7-A9CA-CCA7DE8CD202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2027F2-C545-4DC7-A9CA-CCA7DE8CD202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2027F2-C545-4DC7-A9CA-CCA7DE8CD202}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
